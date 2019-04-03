@@ -1,0 +1,19 @@
+apply plugin: 'kotlin'
+
+jar {
+    baseName = 'bank-account-kata-kotlin'
+    version = '1.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    compile libs.kotlin
+
+    testImplementation libs.test.junitApi,
+            libs.test.assertj
+
+    testRuntimeOnly libs.test.junitEngine
+}
